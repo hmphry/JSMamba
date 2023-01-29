@@ -1,45 +1,52 @@
 import { useState, useEffect } from 'react'
 import QuestionPlate from './components/QuestionPlate'
 import AnswerPlate from './components/AnswerPlate'
+import questions from './questions/questions.json'
+
+let questionSet = [];
 
 
 function App() {
   const [flipped, setFlipped] = useState(false);
   const [lastResult, setLastResult] = useState(false);
+  const [results, setResults] = useState([]);
   const [question, setQuestion] = useState({});
   const [questionCount, setQuestionCount] = useState(0);
 
+  
+
   useEffect(() => {
-    getQuestion()
+    if(questionSet.length === 0 && questions.length > 0) {
+      getQuestionSet()
+    }
   }, [])
   
 
   function getQuote() {}
   function getQuestionSet() {
-    setQuestionCount( false )
+    questionSet = questions.sort(() => 0.5 - Math.random()).slice(0, 10);
+    setQuestionCount(0);
+    getNewQuestion();
   }
-  function getQuestion() {
-    setQuestionCount( "1" )
-    setQuestion({
-      text: "The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the array.",
-      correct_answer: true
-    })
+  function getNewQuestion() {
+    let newQuestion = questionSet.pop(0,1);
+    setQuestionCount( questionCount + 1 );
+    setQuestion( newQuestion );
   }
   function answerQuestion(response:unknown) {
-    if(response === question.correct_answer) {
-      console.log("Yay!");
+    if(response == question.answer) {
       setFlipped( true );
       setLastResult( "correct" );
     } else if(response === "skip") {
-      console.log("No worries!");
       setFlipped( true );
+      setLastResult( "skipped" );
     } else {
-      console.log("Better luck next time!");
       setFlipped( true );
       setLastResult( "incorrect" );
     }
   }
   function nextQuestion() {
+    getNewQuestion();
     setFlipped( false );
     setLastResult( false );
   }
@@ -53,10 +60,12 @@ function App() {
             <p className='pb-2'>"It's not about the number of hours you practice, it's about the number of hours your mind is present during the practice."</p>
           </div>
           <div className='col-span-5'>
-            <div className={`transform-gpu transition-all duration-500 [transform-style:preserve-3d] bg-white rounded-md p-8 shadow-lg ${flipped ? '[transform:rotateY(180deg)]' : false}`}>
-              <QuestionPlate count={questionCount} question={question.text} handleAnswer={answerQuestion}></QuestionPlate>
-              <AnswerPlate result={lastResult} nextQuestion={nextQuestion}></AnswerPlate>
-            </div>
+            { question && 
+              <div className={`transform-gpu transition-all duration-500 [transform-style:preserve-3d] bg-white rounded-md p-8 shadow-lg ${flipped ? '[transform:rotateY(180deg)]' : false}`}>
+                <QuestionPlate count={questionCount} question={question["text"]} handleAnswer={answerQuestion}></QuestionPlate>
+                <AnswerPlate result={lastResult} nextQuestion={nextQuestion}></AnswerPlate>
+              </div>
+            }
           </div>
         </div>
       </div>
