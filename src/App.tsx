@@ -16,9 +16,10 @@ function App() {
 
   function getQuote() {}
   function getQuestionSet() {
-    setQuestionCount( 1 )
+    setQuestionCount( false )
   }
   function getQuestion() {
+    setQuestionCount( "1" )
     setQuestion({
       text: "The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the array.",
       correct_answer: true
