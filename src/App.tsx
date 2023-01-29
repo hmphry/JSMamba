@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react'
 import QuestionPlate from './components/QuestionPlate'
+import AnswerPlate from './components/AnswerPlate'
+
 
 function App() {
+  const [flipped, setFlipped] = useState(false);
+  const [lastResult, setLastResult] = useState(false);
   const [question, setQuestion] = useState({});
   const [questionCount, setQuestionCount] = useState(0);
 
@@ -23,13 +27,21 @@ function App() {
   function answerQuestion(response:unknown) {
     if(response === question.correct_answer) {
       console.log("Yay!");
+      setFlipped( true );
+      setLastResult( "correct" );
     } else if(response === "skip") {
       console.log("No worries!");
+      setFlipped( true );
     } else {
-      console.log("Better luck next time!")
+      console.log("Better luck next time!");
+      setFlipped( true );
+      setLastResult( "incorrect" );
     }
   }
-  function nextQuestion() {}
+  function nextQuestion() {
+    setFlipped( false );
+    setLastResult( false );
+  }
 
   return (
     <div className="App bg-yellow-200">
@@ -40,7 +52,10 @@ function App() {
             <p className='pb-2'>"It's not about the number of hours you practice, it's about the number of hours your mind is present during the practice."</p>
           </div>
           <div className='col-span-5'>
-            <QuestionPlate count={questionCount} question={question.text} handleAnswer={answerQuestion} nextQuestion={nextQuestion}></QuestionPlate>
+            <div className={`transform-gpu transition-all duration-500 [transform-style:preserve-3d] bg-white rounded-md p-8 shadow-lg ${flipped ? '[transform:rotateY(180deg)]' : false}`}>
+              <QuestionPlate count={questionCount} question={question.text} handleAnswer={answerQuestion}></QuestionPlate>
+              <AnswerPlate result={lastResult} nextQuestion={nextQuestion}></AnswerPlate>
+            </div>
           </div>
         </div>
       </div>
