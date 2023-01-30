@@ -4,17 +4,23 @@ import AnswerPlate from './components/AnswerPlate'
 import ReportCard from './components/ReportCard'
 import questions from './questions/questions.json'
 
-let questionSet = [];
-let results = [];
-const quizLength = 3;
+let questionSet: array = [];
+let results: array = [];
+const quizLength: number = 3;
+
+type Question = {
+  answer: string,
+  resources: array,
+  text: string
+}
 
 
 function App() {
-  const [flipped, setFlipped] = useState(false);
-  const [lastResult, setLastResult] = useState(false);
-  const [question, setQuestion] = useState({});
-  const [questionCount, setQuestionCount] = useState(0);
-  const [showReport, setShowReport] = useState(false);
+  const [flipped, setFlipped] = useState<boolean>(false);
+  const [showReport, setShowReport] = useState<boolean>(false);
+  const [lastResult, setLastResult] = useState<boolean | string>(false);
+  const [question, setQuestion] = useState<Question>({});
+  const [questionCount, setQuestionCount] = useState<number>(0);
 
   
 
@@ -35,10 +41,9 @@ function App() {
     if( questionSet.length == 0) {
       setShowReport( true );
       setQuestion( false );
-      console.log( results )
       return false;
     }
-    let newQuestion = questionSet.pop(0,1);
+    const newQuestion: Array = questionSet.pop(0,1);
     setQuestionCount( questionCount + 1 );
     setQuestion( newQuestion );
   }
