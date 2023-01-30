@@ -4,25 +4,28 @@ import AnswerPlate from './components/AnswerPlate'
 import ReportCard from './components/ReportCard'
 import questions from './questions/questions.json'
 
-let questionSet: array = [];
-let results: array = [];
-const quizLength: number = 3;
-
 type Question = {
   answer: string,
-  resources: array,
+  resources: Array<string>,
   text: string
 }
+
+type Result = {
+  question: Question,
+  result: string
+}
+
+let questionSet: Array<Question> = [];
+let results: Array<Result> = [];
+const quizLength: number = 3;
 
 
 function App() {
   const [flipped, setFlipped] = useState<boolean>(false);
   const [showReport, setShowReport] = useState<boolean>(false);
   const [lastResult, setLastResult] = useState<boolean | string>(false);
-  const [question, setQuestion] = useState<Question>({});
+  const [question, setQuestion] = useState<Question | boolean>(false);
   const [questionCount, setQuestionCount] = useState<number>(0);
-
-  
 
   useEffect(() => {
     if(questionSet.length === 0 && questions.length > 0) {
@@ -30,7 +33,6 @@ function App() {
     }
   }, [])
   
-
   function getQuote() {}
   function getQuestionSet() {
     questionSet = questions.sort(() => 0.5 - Math.random()).slice(0, quizLength);
@@ -43,7 +45,7 @@ function App() {
       setQuestion( false );
       return false;
     }
-    const newQuestion: Array = questionSet.pop(0,1);
+    const newQuestion: Question = questionSet.pop(0,1);
     setQuestionCount( questionCount + 1 );
     setQuestion( newQuestion );
   }
@@ -80,7 +82,7 @@ function App() {
           <div className='col-span-5'>
               { question &&
                 <div className={`transform-gpu transition-all duration-500 [transform-style:preserve-3d] bg-white rounded-md p-8 shadow-lg ${flipped ? '[transform:rotateY(180deg)]' : false}`}>
-                  <QuestionPlate count={questionCount} quizLength={quizLength} question={question["text"]} handleAnswer={answerQuestion}></QuestionPlate>
+                  <QuestionPlate count={questionCount} quizLength={quizLength} question={question.text} handleAnswer={answerQuestion}></QuestionPlate>
                   <AnswerPlate result={lastResult} nextQuestion={nextQuestion}></AnswerPlate>
                 </div>
               }

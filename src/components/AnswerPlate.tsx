@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Button from './Button'
 
 interface AnswerProps {
-    result: string,
+    result: boolean | string,
     nextQuestion: Function
 }
 
