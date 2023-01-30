@@ -2,61 +2,61 @@
     {
         "text": "Question 1: The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the original array.",
         "answer": "true",
-        "resources": []
+        "resources": ["Resource 1", "Resource 2"]
     },
     {
         "text": "Question 2: The Array.pop() method removes the last element from an array and returns that element. This method does not changes the length of the original array.",
         "answer": "false",
-        "resources": []
+        "resources": ["Resource 1", "Resource 2"]
     },
     {
         "text": "Question 3: The Array.push() method removes the last element from an array and returns that element. This method changes the length of the original array.",
         "answer": "false",
-        "resources": []
+        "resources": ["Resource 1", "Resource 2"]
     },
     {
         "text": "Question 4: The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the original array.",
         "answer": "true",
-        "resources": []
+        "resources": ["Resource 1", "Resource 2"]
     },
     {
         "text": "Question 5: The Array.pop() method removes the last element from an array and returns that element. This method does not changes the length of the original array.",
         "answer": "false",
-        "resources": []
+        "resources": ["Resource 1", "Resource 2"]
     },
     {
         "text": "Question 6: The Array.push() method removes the last element from an array and returns that element. This method changes the length of the original array.",
         "answer": "false",
-        "resources": []
+        "resources": ["Resource 1", "Resource 2"]
     },
     {
         "text": "Question 7: The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the original array.",
         "answer": "true",
-        "resources": []
+        "resources": ["Resource 1", "Resource 2"]
     },
     {
         "text": "Question 8: The Array.pop() method removes the last element from an array and returns that element. This method does not changes the length of the original array.",
         "answer": "false",
-        "resources": []
+        "resources": ["Resource 1", "Resource 2"]
     },
     {
         "text": "Question 9: The Array.push() method removes the last element from an array and returns that element. This method changes the length of the original array.",
         "answer": "false",
-        "resources": []
+        "resources": ["Resource 1", "Resource 2"]
     },
     {
         "text": "Question 10: The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the original array.",
         "answer": "true",
-        "resources": []
+        "resources": ["Resource 1", "Resource 2"]
     },
     {
         "text": "Question 11: The Array.pop() method removes the last element from an array and returns that element. This method does not changes the length of the original array.",
         "answer": "false",
-        "resources": []
+        "resources": ["Resource 1", "Resource 2"]
     },
     {
         "text": "Question 12: The Array.push() method removes the last element from an array and returns that element. This method changes the length of the original array.",
         "answer": "false",
-        "resources": []
+        "resources": ["Resource 1", "Resource 2"]
     }
 ]

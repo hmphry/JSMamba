@@ -1,17 +1,15 @@
 import { useState } from 'react'
 import Button from './Button'
 
-const QuestionPlate = ({count, question, handleAnswer,}) => {
-    const [flipped, setFlipped] = useState(false);
+const QuestionPlate = ({count, quizLength, question, handleAnswer,}) => {
 
     function handleClick(answer: unknown) {
         handleAnswer( answer );
-        setFlipped( true );
     }
 
     return (
         <div className='[backface-visibility:hidden]'>
-            <p className='mb-2 text-sm text-gray-400'>Question {count} of 10</p>
+            <p className='mb-2 text-sm text-gray-400'>Question {count} of {quizLength}</p>
             <p className='text-2xl'>{question}</p>
             <div className='flex justify-center gap-4 mt-8'>
                 <Button clickHandler={() => handleClick("true")} className="border-gray-400 text-gray-400 hover:border-gray-800 hover:text-gray-800">True</Button>
