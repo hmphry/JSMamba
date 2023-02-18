@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import QuestionPlate from './components/QuestionPlate'
 import AnswerPlate from './components/AnswerPlate'
 import ReportCard from './components/ReportCard'
-import questions from './questions/questions.json'
+import questions from './data/questions.json'
 
 type Question = {
   answer: string,
