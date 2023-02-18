@@ -18,6 +18,7 @@ class Mamba {
     constructor(length:number){
         this.generateQuestions(length);
         this.askQuestion();
+        return this;
     }
     generateQuestions(length:number){
         this.questionSet = questions.sort(() => 0.5 - Math.random()).slice(0, length);

@@ -3,9 +3,6 @@ import QuestionPlate from './components/QuestionPlate'
 import AnswerPlate from './components/AnswerPlate'
 import ReportCard from './components/ReportCard'
 import questions from './questions/questions.json'
-import Mamba from './utils/mamba';
-
-console.log(new Mamba(10))
 
 type Question = {
   answer: string,
@@ -20,7 +17,7 @@ type Result = {
 
 let questionSet: Array<Question> = [];
 let results: Array<Result> = [];
-const quizLength: number = 3;
+const quizLength: number = 10;
 
 
 function App() {
@@ -37,21 +34,25 @@ function App() {
   }, [])
   
   function getQuote() {}
+  function newMamba() {
+    questionSet = [];
+    results = [];
+    setShowReport( false );
+    setQuestionCount( 1 );
+    getQuestionSet();
+  }
   function getQuestionSet() {
-    questionSet = questions.sort(() => 0.5 - Math.random()).slice(0, quizLength);
-    setQuestionCount(0);
+    questionSet = questions.sort( () => 0.5 - Math.random() ).slice( 0, quizLength );
     getNewQuestion();
   }
   function getNewQuestion() {
-    if( questionSet.length == 0) {
+    if( questionSet.length === 0 ) {
       setShowReport( true );
-      console.log( results )
       setQuestion( false );
       return false;
     }
-    const newQuestion: Question = questionSet.pop(0,1);
     setQuestionCount( questionCount + 1 );
-    setQuestion( newQuestion );
+    setQuestion( questionSet.pop(0,1) );
   }
   function answerQuestion(response:string) {
     if(response == question.answer) {
@@ -78,19 +79,23 @@ function App() {
   return (
     <div className="App bg-yellow-200">
       <div className='w-full max-w-7xl px-8 lg:mx-auto'>
-        <div className='grid grid-cols-8 gap-8 min-h-screen items-center'>
+        <div className='grid grid-cols-8 gap-8 min-h-screen items-stretch'>
           <div className='col-span-3'>
-            <h1 className='mb-4 text-2xl text-purple-700'>JSMamba</h1>
-            <p className='pb-2'>"It's not about the number of hours you practice, it's about the number of hours your mind is present during the practice."</p>
+            <div className='sticky top-1/2 -translate-y-1/2'>
+              <h1 className='mb-4 text-2xl text-purple-700'>JSMamba</h1>
+              <p className='pb-2'>"It's not about the number of hours you practice, it's about the number of hours your mind is present during the practice."</p>
+            </div>
           </div>
-          <div className='col-span-5 py-4'>
+          <div className='flex items-center col-span-5 py-4'>
+            <div>
               { question &&
                 <div className={`transform-gpu transition-all duration-500 [transform-style:preserve-3d] bg-white rounded-md p-8 shadow-lg ${flipped ? '[transform:rotateY(180deg)]' : false}`}>
                   <QuestionPlate count={questionCount} quizLength={quizLength} question={question.text} handleAnswer={answerQuestion}></QuestionPlate>
                   <AnswerPlate result={lastResult} nextQuestion={nextQuestion}></AnswerPlate>
                 </div>
               }
-              { showReport && <ReportCard /> }
+              { showReport && <ReportCard results={results} newMamba={newMamba} /> }
+            </div>
           </div>
         </div>
       </div>

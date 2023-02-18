@@ -1,92 +1,28 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+import QuestionResult from './QuestionResult'
 import Button from './Button'
 
-const ReportCard = () => {
+interface ReportProps{
+    results: Array<Object>;
+    newMamba: Function;
+}
+
+const ReportCard = (props:ReportProps) => {
+
+    const correctAmount = props.results.filter(x => x.result === "correct").length;
+
     return (
         <div className={`transform-gpu transition-all duration-500 [transform-style:preserve-3d] bg-white rounded-md p-8 shadow-lg`}>
-            <h1 className='text-xl'>You got 3 questions correct!</h1>
-            <p className='pt-4'>Questions that need work:</p>
-            <ul className='pt-4 pl-4'>
-                <li className='pb-12'>
-                    <p className='text-purple-400 text-sm tracking-widest uppercase'>Question</p>
-                    <p className='pb-4'>Question 1: The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the original array.</p>
-                    <div className='flex justify-start gap-4'>
-                        <div>
-                            <p className='text-purple-400 text-sm tracking-widest uppercase'>Your Answer</p>
-                            <p className='pb-4'>True</p>
-                        </div>
-                        <div>
-                            <p className='text-purple-400 text-sm tracking-widest uppercase'>Correct Answer</p>
-                            <p className='pb-4'>False</p>
-                        </div>
-                    </div>
-                    <p className='text-purple-400 text-sm tracking-widest uppercase'>Further Resources</p>
-                    <ul>
-                        <li>Resource 1</li>
-                        <li>Resource 2</li>
-                    </ul>
-                </li>
-                <li className='pb-4'>
-                    <p className='text-purple-400 text-sm tracking-widest uppercase'>Question</p>
-                    <p className='pb-4'>Question 1: The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the original array.</p>
-                    <div className='flex justify-start gap-4'>
-                        <div>
-                            <p className='text-purple-400 text-sm tracking-widest uppercase'>Your Answer</p>
-                            <p className='pb-4'>True</p>
-                        </div>
-                        <div>
-                            <p className='text-purple-400 text-sm tracking-widest uppercase'>Correct Answer</p>
-                            <p className='pb-4'>False</p>
-                        </div>
-                    </div>
-                    <p className='text-purple-400 text-sm tracking-widest uppercase'>Further Resources</p>
-                    <ul>
-                        <li>Resource 1</li>
-                        <li>Resource 2</li>
-                    </ul>
-                </li>
+            <h1 className='text-xl'>You answered {correctAmount === 1 ? `1 question` : `${correctAmount} questions`} correctly. </h1>
+            <p className='text-gray-400'>Here are the areas you need to work on:</p>
+            <ul className='pt-4'>
+                {props.results.filter(x => x.result === "incorrect" || x.result === "skip").map((x,i) => {
+                    return <QuestionResult key={`question-${i}`} question={x.question} />
+                })}
             </ul>
-            <p className='pt-8'>Questions you were solid on:</p>
-            <ul className='pt-4 pl-4'>
-                <li className='pb-12'>
-                    <p className='text-purple-400 text-sm tracking-widest uppercase'>Question</p>
-                    <p className='pb-4'>Question 1: The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the original array.</p>
-                    <div className='flex justify-start gap-4'>
-                        <div>
-                            <p className='text-purple-400 text-sm tracking-widest uppercase'>Your Answer</p>
-                            <p className='pb-4'>True</p>
-                        </div>
-                        <div>
-                            <p className='text-purple-400 text-sm tracking-widest uppercase'>Correct Answer</p>
-                            <p className='pb-4'>False</p>
-                        </div>
-                    </div>
-                    <p className='text-purple-400 text-sm tracking-widest uppercase'>Further Resources</p>
-                    <ul>
-                        <li>Resource 1</li>
-                        <li>Resource 2</li>
-                    </ul>
-                </li>
-                <li className='pb-4'>
-                    <p className='text-purple-400 text-sm tracking-widest uppercase'>Question</p>
-                    <p className='pb-4'>Question 1: The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the original array.</p>
-                    <div className='flex justify-start gap-4'>
-                        <div>
-                            <p className='text-purple-400 text-sm tracking-widest uppercase'>Your Answer</p>
-                            <p className='pb-4'>True</p>
-                        </div>
-                        <div>
-                            <p className='text-purple-400 text-sm tracking-widest uppercase'>Correct Answer</p>
-                            <p className='pb-4'>False</p>
-                        </div>
-                    </div>
-                    <p className='text-purple-400 text-sm tracking-widest uppercase'>Further Resources</p>
-                    <ul>
-                        <li>Resource 1</li>
-                        <li>Resource 2</li>
-                    </ul>
-                </li>
-            </ul>
+            <div className='flex justify-center'>
+                <Button clickHandler={()=>{props.newMamba()}} className="border-purple-400 text-purple-400 hover:border-gray-800 hover:text-gray-800">Start A New Mamba</Button>
+            </div>
         </div>
     )
   }
