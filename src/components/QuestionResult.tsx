@@ -17,7 +17,7 @@ const QuestionResult = (props:QuestionProps) => {
             </div>
             <p className='text-gray-400 text-sm tracking-widest uppercase'>Further Resources</p>
             <ul className='pl-10'>
-                {props.question.resources.map(x => <li><a href={x} className='text-purple-400 py-2'>{x}</a></li>)}
+                {props.question.resources.map(x => <li key={x}><a href={x} className='text-purple-400 py-2'>{x}</a></li>)}
             </ul>
             <div className='mt-6 h-[1px] bg-gray-300'></div>
         </li>
