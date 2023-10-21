@@ -28,17 +28,17 @@ function App() {
   const [questionCount, setQuestionCount] = useState<number>(0);
 
   useEffect(() => {
-    if(questionSet.length === 0 && questions.length > 0) {
-      getQuestionSet()
-    }
+    newMamba()
   }, [])
   
+  // TODO: Add quote list
   function getQuote() {}
+
+  // Generates a new quiz
   function newMamba() {
     questionSet = [];
     results = [];
     setShowReport( false );
-    setQuestionCount( 1 );
     getQuestionSet();
   }
   function getQuestionSet() {
@@ -51,7 +51,11 @@ function App() {
       setQuestion( false );
       return false;
     }
-    setQuestionCount( questionCount + 1 );
+    if(showReport) {
+      setQuestionCount( 1 );
+    } else {
+      setQuestionCount( questionCount + 1 );
+    }
     setQuestion( questionSet.pop(0,1) );
   }
   function answerQuestion(response:string) {
