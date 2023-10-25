@@ -1,62 +1,102 @@
 [
     {
-        "text": "Question 1: The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the original array.",
+        "text": "The pop() method of Array instances removes the last element from an array and returns that element. This method changes the length of the array.",
         "answer": "true",
-        "resources": ["Resource 1", "Resource 2"]
+        "resources": [
+            {
+                "site": "MDN Web Docs",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop"
+            }
+        ]
     },
     {
-        "text": "Question 2: The Array.pop() method removes the last element from an array and returns that element. This method does not changes the length of the original array.",
+        "text": "The pop() method of Array instances removes the first element from an array and returns that element. This method changes the length of the array.",
         "answer": "false",
-        "resources": ["Resource 1", "Resource 2"]
+        "resources": [
+            {
+                "site": "MDN Web Docs",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop"
+            }
+        ]
     },
     {
-        "text": "Question 3: The Array.push() method removes the last element from an array and returns that element. This method changes the length of the original array.",
-        "answer": "false",
-        "resources": ["Resource 1", "Resource 2"]
-    },
-    {
-        "text": "Question 4: The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the original array.",
+        "text": "The push() method of Array instances adds the specified elements to the end of an array and returns the new length of the array.",
         "answer": "true",
-        "resources": ["Resource 1", "Resource 2"]
+        "resources": [
+            {
+                "site": "MDN Web Docs",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push"
+            }
+        ]
     },
     {
-        "text": "Question 5: The Array.pop() method removes the last element from an array and returns that element. This method does not changes the length of the original array.",
+        "text": "The push() method of Array instances adds the specified elements to the beginning of an array and returns the new length of the array.",
         "answer": "false",
-        "resources": ["Resource 1", "Resource 2"]
+        "resources": [
+            {
+                "site": "MDN Web Docs",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push"
+            }
+        ]
     },
     {
-        "text": "Question 6: The Array.push() method removes the last element from an array and returns that element. This method changes the length of the original array.",
-        "answer": "false",
-        "resources": ["Resource 1", "Resource 2"]
-    },
-    {
-        "text": "Question 7: The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the original array.",
+        "text": "The shift() method of Array instances removes the first element from an array and returns that removed element. This method changes the length of the array.",
         "answer": "true",
-        "resources": ["Resource 1", "Resource 2"]
+        "resources": [
+            {
+                "site": "MDN Web Docs",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift"
+            }
+        ]
     },
     {
-        "text": "Question 8: The Array.pop() method removes the last element from an array and returns that element. This method does not changes the length of the original array.",
+        "text": "The shift() method of Array instances removes the last element from an array and returns that removed element. This method changes the length of the array.",
         "answer": "false",
-        "resources": ["Resource 1", "Resource 2"]
+        "resources": [
+            {
+                "site": "MDN Web Docs",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift"
+            }
+        ]
     },
     {
-        "text": "Question 9: The Array.push() method removes the last element from an array and returns that element. This method changes the length of the original array.",
+        "text": "The shift() method of Array instances removes the last element from an array and returns the new length of the array. This method changes the length of the array.",
         "answer": "false",
-        "resources": ["Resource 1", "Resource 2"]
+        "resources": [
+            {
+                "site": "MDN Web Docs",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift"
+            }
+        ]
     },
     {
-        "text": "Question 10: The Array.pop() method removes the last element from an array and returns that element. This method changes the length of the original array.",
+        "text": "The shift() method of Array instances removes the last element from an array and returns the new length of the array. This method does not change the length of the array.",
+        "answer": "false",
+        "resources": [
+            {
+                "site": "MDN Web Docs",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift"
+            }
+        ]
+    },
+    {
+        "text": "The slice() method of Array instances returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.",
         "answer": "true",
-        "resources": ["Resource 1", "Resource 2"]
+        "resources": [
+            {
+                "site": "MDN Web Docs",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice"
+            }
+        ]
     },
     {
-        "text": "Question 11: The Array.pop() method removes the last element from an array and returns that element. This method does not changes the length of the original array.",
-        "answer": "false",
-        "resources": ["Resource 1", "Resource 2"]
-    },
-    {
-        "text": "Question 12: The Array.push() method removes the last element from an array and returns that element. This method changes the length of the original array.",
-        "answer": "false",
-        "resources": ["Resource 1", "Resource 2"]
+        "text": "The splice() method of Array instances changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.",
+        "answer": "true",
+        "resources": [
+            {
+                "site": "MDN Web Docs",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"
+            }
+        ]
     }
 ]
