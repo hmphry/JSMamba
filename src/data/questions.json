@@ -98,5 +98,385 @@
                 "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"
             }
         ]
+    },
+    {
+        "text": "In JavaScript, the typeof operator can be used to determine if a variable is an array.",
+        "answer": "false",
+        "resources": [
+            {
+                "site": "MDN Web Docs: typeof",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+            }
+        ]
+    },
+    {
+        "text": "The Array.prototype.map() method creates a new array populated with the results of calling a provided function on every element in the calling array.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Array.prototype.map()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map"
+        }
+        ]
+    },
+    {
+        "text": "JavaScript's null and undefined are both considered to be falsy values but not strictly equal to each other.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Equality comparisons and sameness",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness"
+        }
+        ]
+    },
+    {
+        "text": "The addEventListener method is used to asynchronously attach an event handler to the document.",
+        "answer": "false",
+        "resources": [
+        {
+        "site": "MDN Web Docs: EventTarget.addEventListener",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"
+        }
+        ]
+    },
+    {
+        "text": "The Promise.all() method takes an iterable of promises as an input, and returns a single Promise that resolves when all of the promises in the iterable have resolved.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Promise.all()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all"
+        }
+        ]
+    },
+    {
+        "text": "In JavaScript, the switch statement can be used with string values as well as numbers.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: switch",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch"
+        }
+        ]
+    },
+    {
+        "text": "JavaScript allows you to conditionally declare functions using the if statement.",
+        "answer": "false",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Function declarations",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function"
+        }
+        ]
+    },
+    {
+        "text": "The localStorage object stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser cache / Locally Stored Data.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Window.localStorage",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"
+        }
+        ]
+    },
+    {
+        "text": "Using let within a for loop creates a new scope for each iteration.",
+        "answer": "true",
+        "resources": [
+            {
+                "site": "MDN Web Docs: let",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"
+            }
+        ]
+    },
+    {
+        "text": "The Function.prototype.bind() method can change the context (this) of a function and also prepend arguments to the function call.",
+        "answer": "true",
+        "resources": [
+            {
+                "site": "MDN Web Docs: Function.prototype.bind()",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind"
+            }
+        ]
+    },
+    {
+        "text": "In a browser environment, window.foo and var foo are equivalent at the global scope.",
+        "answer": "true",
+        "resources": [
+            {
+                "site": "MDN Web Docs: Global variables",
+                "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects"
+            }
+        ]
+    },
+    {
+        "text": "The Array.prototype.reduceRight() method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Array.prototype.reduceRight()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight"
+        }
+        ]
+    },
+    {
+        "text": "A JavaScript WeakSet is iterable using a for...of loop.",
+        "answer": "false",
+        "resources": [
+        {
+        "site": "MDN Web Docs: WeakSet",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet"
+        }
+        ]
+    },
+    {
+        "text": "The navigator.geolocation API requires HTTPS or localhost for secure contexts in modern browsers.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Navigator.geolocation",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Navigator/geolocation"
+        }
+        ]
+    },
+    {
+        "text": "Template literals in JavaScript can be nested.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Template literals",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals"
+        }
+        ]
+    },
+    {
+        "text": "The finally block in a JavaScript try...catch statement will not execute if the catch block returns a value.",
+        "answer": "false",
+        "resources": [
+        {
+        "site": "MDN Web Docs: try...catch",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"
+        }
+        ]
+    },
+    {
+        "text": "JavaScript's Array.prototype.splice() method can be used to insert elements into an array without removing any existing elements.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Array.prototype.splice()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"
+        }
+        ]
+    },
+    {
+        "text": "The Set object in JavaScript automatically removes duplicate entries, so all elements in a set are unique.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Set",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set"
+        }
+        ]
+    },
+    {
+        "text": "In JavaScript, the === operator checks for both value and type equality, whereas == checks for value equality with type conversion if necessary.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Equality comparisons and sameness",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness"
+        }
+        ]
+    },
+    {
+        "text": "The finally block in a try-catch-finally statement will execute whether or not an exception is thrown.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: try...catch",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"
+        }
+        ]
+    },
+    {
+        "text": "Arrow functions in JavaScript do not have their own this context; they inherit this from the parent scope at the time they are defined.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Arrow function expressions",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions"
+        }
+        ]
+    },
+    {
+        "text": "The document.querySelector() method in JavaScript returns the first element within the document that matches the specified group of selectors, or null if no matches are found.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Document.querySelector()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"
+        }
+        ]
+    },
+    {
+        "text": "JavaScript's async functions can contain zero or more await expressions, which pause the execution of the async function and wait for the passed Promise's resolution.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: async function",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function"
+        }
+        ]
+    },
+    {
+        "text": "JavaScript's Promise.race() method returns a promise that fulfills or rejects as soon as one of the promises in an iterable fulfills or rejects, with the value or reason from that promise.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Promise.race()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race"
+        }
+        ]
+    },
+    {
+        "text": "In JavaScript, NaN is considered equal to itself and can be used reliably in equality comparisons.",
+        "answer": "false",
+        "resources": [
+        {
+        "site": "MDN Web Docs: NaN",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN"
+        }
+        ]
+    },
+    {
+        "text": "JavaScript allows cross-origin scripting by default as part of its security model.",
+        "answer": "false",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Same-origin policy",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy"
+        }
+        ]
+    },
+    {
+        "text": "In JavaScript, the void operator is used to discard an expression's return value, returning undefined instead.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: void operator",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void"
+        }
+        ]
+    },
+    {
+        "text": "The console.log() method in JavaScript can only print strings to the console, and any non-string arguments need to be converted to strings before being passed to console.log().",
+        "answer": "false",
+        "resources": [
+        {
+        "site": "MDN Web Docs: console.log()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/console/log"
+        }
+        ]
+    },
+    {
+        "text": "In JavaScript, the document.createElement() method can create HTML elements, but it cannot set any attributes or content; these must be added separately after creation.",
+        "answer": "false",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Document.createElement()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"
+        }
+        ]
+    },
+    {
+        "text": "JavaScript's RegExp objects are stateful when they have the global (g) or sticky (y) flags set; subsequent executions of the test() method will advance the lastIndex property.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: RegExp.lastIndex",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex"
+        }
+        ]
+    },
+    {
+        "text": "The Object.assign() method is used to copy all enumerable own properties from one or more source objects to a target object, mutating the target object.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Object.assign()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"
+        }
+        ]
+    },
+    {
+        "text": "Using Array.prototype.concat(), you can merge two arrays without affecting the original arrays, as it returns a new array.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Array.prototype.concat()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat"
+        }
+        ]
+    },
+    {
+        "text": "The Object.values() method returns an array containing the values that correspond to all of a given object's own enumerable string properties, in the same order as that provided by a for...in loop.",
+        "answer": "false",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Object.values()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/values"
+        }
+        ]
+    },
+    {
+        "text": "Array.prototype.filter() does not mutate the array on which it is called but instead returns a new array that includes elements that pass the test implemented by the provided function.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Array.prototype.filter()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+        }
+        ]
+    },
+    {
+        "text": "The Object.freeze() method makes it possible to add new properties to an object, but existing properties cannot be modified or deleted.",
+        "answer": "false",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Object.freeze()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze"
+        }
+        ]
+    },
+    {
+        "text": "Array.prototype.reduce() can be used to transform an array into a value of any type, not just another array or object, by executing a reducer function on each element of the array.",
+        "answer": "true",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Array.prototype.reduce()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce"
+        }
+        ]
+    },
+    {
+        "text": "Array.prototype.filter() mutates the array on which it is called and removes elements that do not pass the test implemented by the provided function.",
+        "answer": "false",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Array.prototype.filter()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter"
+        }
+        ]
+    },
+    {
+        "text": "Array.prototype.reduce() can only be used to transform an array into another array or object, and cannot produce a value of any other type by executing a reducer function on each element of the array.",
+        "answer": "false",
+        "resources": [
+        {
+        "site": "MDN Web Docs: Array.prototype.reduce()",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce"
+        }
+        ]
     }
 ]
