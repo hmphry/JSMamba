@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html {
+    @apply bg-yellow-200;
     font-family: 'Rubik', sans-serif;
 }

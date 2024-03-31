@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
-import QuestionPlate from './components/QuestionPlate'
+import { useEffect, useState } from 'react'
 import AnswerPlate from './components/AnswerPlate'
+import QuestionPlate from './components/QuestionPlate'
 import ReportCard from './components/ReportCard'
 import questions from './data/questions.json'
 
@@ -81,29 +81,26 @@ function App() {
   
 
   return (
-    <div className="App bg-yellow-200">
-      <div className='w-full max-w-7xl px-8 lg:mx-auto'>
-        <div className='grid grid-cols-8 gap-8 min-h-screen items-stretch'>
-          <div className='col-span-3'>
-            <div className='sticky top-1/2 -translate-y-1/2'>
+    <div className="App">
+      <div className='flex items-center w-full min-h-screen max-w-7xl px-8 lg:mx-auto'>
+        <div className='grid grid-row-2 md:grid-row-1 md:grid-cols-8 gap-8 md:min-h-screen md:items-stretch'>
+          <aside className='relative md:col-span-3'>
+            <div className='md:sticky md:top-1/2 md:-translate-y-1/2'>
               <h1 className='mb-4 text-2xl text-purple-700'>JSMamba</h1>
               <p className='pb-2'>"It's not about the number of hours you practice, it's about the number of hours your mind is present during the practice."</p>
             </div>
-          </div>
-          <div className='flex items-center col-span-5 py-4'>
-            <div>
+          </aside>
+          <main className='flex items-center md:col-span-5 py-4'>
               { question &&
-                <div className={`transform-gpu transition-all duration-500 [transform-style:preserve-3d] bg-white rounded-md p-8 shadow-lg ${flipped ? '[transform:rotateY(180deg)]' : false}`}>
-                  <QuestionPlate count={questionCount} quizLength={quizLength} question={question.text} handleAnswer={answerQuestion}></QuestionPlate>
+                <div className={`transform-gpu transition-all duration-500 [transform-style:preserve-3d] bg-white rounded-md p-8 shadow-lg ${flipped ? '[transform:rotateY(180deg)]' : ""}`}>
+                  <QuestionPlate count={questionCount} quizLength={quizLength} question={question !== true && question.text} handleAnswer={answerQuestion}></QuestionPlate>
                   <AnswerPlate result={lastResult} nextQuestion={nextQuestion}></AnswerPlate>
                 </div>
               }
               { showReport && <ReportCard results={results} newMamba={newMamba} /> }
-            </div>
-          </div>
+          </main>
         </div>
       </div>
-        
     </div>
   )
 }
